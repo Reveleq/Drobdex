@@ -21,6 +21,7 @@ body {
   max-width: 1200px;
 }
 .header {
+  position: relative;
   &__box {
     display: flex;
     justify-content: space-evenly;
@@ -102,13 +103,54 @@ body {
       position: relative;
       display: flex;
       margin: 1em;
+      top: 7rem;
+    }
+  }
+  &__history-link {
+    &:hover {
+      color: $green;
+    }
+    &-img {
+      padding-top: 0.4em;
+      margin-left: 0.1em;
+      height: 2rem;
+      color: $black;
+      transition: color 0.3s, transform 0.5s;
+    }
+  }
+  &__special-link {
+    position: relative;
+    display: inline-block;
+    height: 8rem;
+    line-height: 8.5rem;
+    list-style: none;
+    &-list {
+      position: absolute;
+      width: 200%;
       top: 8rem;
+      right: -3.5em;
+      text-align: center;
+      z-index: 20;
+    }
+    &-li {
+      display: none;
+      background-color: $second-main;
+      opacity: 0;
+      z-index: 20;
+    }
+    &-a {
+      color: $black;
+      text-decoration: none;
+      font-size: 2rem;
+      transition: color 0.3s;
+      &:hover {
+        color: $green;
+      }
     }
   }
   &__link {
     position: relative;
     color: $black;
-    font-weight: 300;
     font-size: 1.8rem;
     text-decoration: none;
     transition: color 0.3s;
@@ -117,6 +159,17 @@ body {
       color: $green;
     }
   }
+}
+.desktop-nav__special-link:hover .desktop-nav__special-link-li {
+  display: block;
+  animation: special-link 0.5s forwards;
+  transform-origin: top;
+}
+.desktop-nav__special-link:hover .desktop-nav__history-link {
+  color: $black;
+}
+.desktop-nav__special-link:hover .desktop-nav__special-link-li:nth-child(2) {
+  animation-delay: 0.2s;
 }
 .mobile-nav {
   display: block;
@@ -151,7 +204,6 @@ body {
     position: relative;
     padding: 2em 0;
     font-size: 2rem;
-    font-weight: 300;
     color: $black;
     text-decoration: none;
     transition: color 0.3s;
@@ -205,7 +257,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 35, 32, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
   }
   &__text {
     display: flex;
@@ -222,6 +274,7 @@ body {
     }
   }
   &__title {
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 1rem;
     color: $main;
     font-size: 4rem;
@@ -256,11 +309,12 @@ body {
     width: 6rem;
     height: 6rem;
     background-color: $green;
-    border: 1px solid $black;
+    border: none;
+    border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    border-radius: 50%;
     transition: background-color 0.3s;
+    opacity: 0.5;
     cursor: pointer;
     z-index: 6;
     &:hover {
@@ -275,7 +329,7 @@ body {
 }
 .about-us {
   position: relative;
-  padding-bottom: 4em;
+  padding-bottom: 5em;
   background-color: $main;
   overflow: hidden;
   &__title {
@@ -284,7 +338,8 @@ body {
     margin-bottom: 2em;
     font-size: 3rem;
     text-transform: uppercase;
-    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
     text-align: center;
   }
   &__box {
@@ -297,14 +352,22 @@ body {
   &__img {
     display: block;
     margin: 0 0 2em;
+    height: 25rem;
     width: 25rem;
   }
   &__text {
     position: relative;
     display: block;
     margin: 0 0 2em;
-    font-size: 1.6rem;
+
     max-width: 25rem;
+    &-title {
+      font-size: 2.5rem;
+      margin-bottom: 0.5em;
+    }
+    &-p {
+      font-size: 1.6rem;
+    }
   }
   &__bg-icon {
     position: absolute;
@@ -330,7 +393,8 @@ body {
 }
 .history {
   position: relative;
-  background-color: #f9f9f9;
+  background-color: $grey;
+  padding-bottom: 10em;
   &__pallete {
     position: absolute;
     top: 0;
@@ -341,27 +405,29 @@ body {
   &__title {
     position: relative;
     padding-top: 2em;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
+    font-family: "Montserrat", sans-serif;
     font-size: 3rem;
-    color: $main;
+    color: $black;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: normal;
     text-align: center;
   }
-  &__img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-image: url("/dist/img/history-hero.jpg");
-    padding-bottom: 5em;
-  }
+  // &__img {
+  //   position: relative;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-size: cover;
+  //   background-position: center;
+  //   padding-bottom: 5em;
+  // }
   &__bg {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 35, 32, 0.6);
+    top: 80%;
+    background-color: $grey;
+    z-index: 0;
   }
   &__box {
     display: flex;
@@ -378,25 +444,24 @@ body {
   }
   &__card {
     position: relative;
-    padding: 2em;
+    padding: 2.5em;
     margin-bottom: 4em;
-    width: 70%;
-    max-width: 25rem;
-    height: 30rem;
-    background-color: $main;
+    width: 90%;
+    max-width: 35rem;
+    background-color: $white;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: transform 0.3s;
     &:hover {
-      transform: scale(0.98);
+      transform: scale(0.99);
     }
     &-text {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       font-size: 1.6rem;
-      width: 100%;
-      height: 100%;
+      &-header {
+        padding: 0.5em 0;
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5rem;
+      }
     }
     &-bg-icon {
       position: absolute;
@@ -421,19 +486,18 @@ body {
 }
 .offer {
   position: relative;
-  margin-top: 4em;
   padding-bottom: 5em;
   background-color: $grey;
   overflow: hidden;
-
   &__title {
     position: relative;
     padding-top: 2em;
     margin-bottom: 2em;
     font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
     color: $black;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: normal;
     text-align: center;
   }
   &__cards {
@@ -450,8 +514,7 @@ body {
     margin: 3em;
     height: 35rem;
     width: 25rem;
-    border: 1px solid $grey;
-    background-color: $main;
+    background-color: $white;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: transform 0.3s;
@@ -465,7 +528,8 @@ body {
     &-title {
       margin: 1em;
       font-size: 2rem;
-      font-weight: 400;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
       text-align: center;
     }
     &-text {
@@ -497,6 +561,118 @@ body {
     }
   }
 }
+.certificates {
+  background-color: $grey;
+  padding-bottom: 10em;
+  &__title {
+    position: relative;
+    padding-top: 2em;
+    margin-bottom: 2em;
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    color: $black;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+  }
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transition: opacity 0.5s;
+    z-index: 20;
+    &-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 21;
+    }
+    &-img {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      max-width: 700px;
+      transform: translate(-50%, -50%);
+      z-index: 22;
+    }
+    &-close {
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+      width: 4rem;
+      height: 4rem;
+      border: none;
+      background: none;
+      border: none;
+      transition: transform 0.3s;
+      cursor: pointer;
+      z-index: 23;
+      &:hover {
+        transform: scale(0.99);
+      }
+      &-img {
+        height: 3rem;
+      }
+    }
+  }
+  &__card {
+    position: relative;
+    margin: 2em;
+    width: 90%;
+    max-width: 35rem;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      transition: transform .3s;
+      &:hover{
+        transform: scale(1.01);
+      }
+    &-title {
+      padding: 1em;
+      text-align: center;
+      font-weight: normal;
+      font-family: "Montserrat", sans-serif;
+      font-size: 2.5rem;
+    }
+    &-icon {
+      position: absolute;
+      margin: 1em;
+      bottom: 5%;
+      right: 5%;
+      height: 5em;
+    }
+    &-btn {
+      margin: 2em;
+      padding: 0.5em 2em;
+      background-color: $grey;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      border: none;
+      font-size: 1.6rem;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: $light-green;
+        color: $main;
+      }
+    }
+  }
+}
 .equipment {
   position: relative;
   background-color: $main;
@@ -505,11 +681,12 @@ body {
   &__title {
     position: relative;
     padding-top: 2em;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
     color: $black;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: normal;
     text-align: center;
   }
   &__box {
@@ -525,7 +702,7 @@ body {
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: transform 0.3s;
     z-index: 5;
-    background-color: $main;
+    background-color: #fff;
     &:hover {
       transform: scale(1.01);
     }
@@ -558,7 +735,7 @@ body {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 35, 32, 0.6);
+      background-color: rgba(0, 0, 0, 0.6);
       z-index: 0;
     }
     &-text {
@@ -577,16 +754,17 @@ body {
 .gallery {
   position: relative;
   padding-bottom: 10em;
-  background-color: $grey;
+  background-color: $main;
   overflow: hidden;
   &__title {
     position: relative;
     padding-top: 2em;
     margin-bottom: 2em;
+    font-family: "Montserrat", sans-serif;
     font-size: 3rem;
     color: $black;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: normal;
     text-align: center;
   }
   &__accordion {
@@ -615,13 +793,12 @@ body {
         height: 14.5rem;
         width: 25rem;
         border: none;
-        background-color: $grey;
         overflow: hidden;
         box-shadow: 8px 8px 11px -2px rgba(0, 0, 0, 1);
         cursor: pointer;
         transition: transform 0.3s;
         &:hover {
-          transform: scale(1.05);
+          transform: scale(1.01);
         }
       }
       &-img {
@@ -713,17 +890,15 @@ body {
       font-size: 2rem;
       text-align: center;
       border: none;
-      color: $main;
+      color: $black;
       box-shadow: 8px 8px 11px -2px rgba(0, 0, 0, 1);
-      background-color: $light-green;
-      transition: background-color 0.3s;
+      background-color: $grey;
+      transition: background-color 0.3s, color 0.3s;
       cursor: pointer;
       z-index: 5;
-      &--second {
-        background-color: $green;
-      }
       &:hover {
-        background-color: $dark-green;
+        background-color: $main;
+        color: $light-green;
         outline: none;
       }
     }
@@ -734,11 +909,12 @@ body {
   &__title {
     position: relative;
     padding-top: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    font-family: "Montserrat", sans-serif;
     font-size: 3rem;
     color: $main;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: normal;
     text-align: center;
   }
   &__img {
@@ -748,13 +924,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-    padding-bottom: 5em;
+    padding-bottom: 10em;
   }
   &__bg {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 35, 32, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
   }
   &__center {
     &-box {
@@ -799,7 +975,7 @@ body {
   }
 }
 .footer {
-  background-color: $dark-green;
+  background-color: #333;
   &__text {
     padding: 3em;
     color: $main;
@@ -839,7 +1015,7 @@ body {
     position: relative;
     border-top: 2px solid $main;
     padding: 2em;
-    background-color: $dark-green;
+    background-color: #333;
     &-text {
       text-align: center;
       font-size: 1.6rem;
@@ -889,6 +1065,16 @@ body {
     left: 80%;
     transform: rotate(-30deg);
     height: 5rem;
+  }
+}
+@keyframes special-link {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }
 .margin-top {
@@ -1106,13 +1292,6 @@ body {
     opacity: 0;
   }
 }
-@media (min-width: 320px) {
-  .history {
-    &__card {
-      height: 25rem;
-    }
-  }
-}
 @media (min-width: 768px) {
   .header__card-contact {
     display: flex;
@@ -1124,16 +1303,19 @@ body {
       font-size: 2.2rem;
     }
   }
-  .header-hero {
-    height: 60rem;
-  }
   .about-us {
     padding-bottom: 10em;
     &__text {
       margin: 0;
       margin-bottom: 2em;
       min-width: 5rem;
-      font-size: 1.8rem;
+      min-height: 35rem;
+      &-p {
+        font-size: 1.8rem;
+      }
+      &-title {
+        font-size: 3.5rem;
+      }
     }
     &__box {
       flex-direction: row;
@@ -1150,23 +1332,23 @@ body {
     }
   }
   .history {
-    &__title {
-      margin-bottom: 4em;
-    }
     &__box {
       flex-direction: row;
       flex-wrap: wrap;
     }
     &__card {
       margin: 3em;
-      max-width: 30rem;
+      max-width: 45rem;
       &-text {
         font-size: 1.8rem;
+        &-header {
+          font-size: 3rem;
+        }
       }
     }
   }
   .offer {
-    padding-bottom: 15em;
+    padding-bottom: 10em;
     &__cards {
       flex-direction: row;
       flex-wrap: wrap;
@@ -1179,6 +1361,12 @@ body {
       &-text {
         font-size: 1.8rem;
       }
+    }
+  }
+  .certificates {
+    &__box {
+      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
   .equipment {
@@ -1286,12 +1474,18 @@ body {
       font-size: 2rem;
     }
   }
+  .header-hero {
+    &__title {
+      font-size: 5.5rem;
+    }
+  }
   .about-us {
     &__title {
-      font-size: 3.2rem;
+      font-size: 4.5rem;
     }
     &__img {
-      width: 40rem;
+      width: 35rem;
+      height: 35rem;
     }
     &__text {
       max-height: 30rem;
@@ -1299,16 +1493,12 @@ body {
   }
   .history {
     &__title {
-      font-size: 3.2rem;
+      font-size: 4.5rem;
     }
     &__box {
       justify-content: start;
       flex-wrap: nowrap;
       width: 100%;
-    }
-    &__img {
-      padding-bottom: 0;
-      background-position-y: 90%;
     }
     &__card {
       &:nth-child(2) {
@@ -1321,27 +1511,42 @@ body {
       }
       margin: 0;
       width: 100%;
-      height: 23rem;
+      height: max-content;
       max-width: none;
     }
   }
   .offer {
     &__title {
-      font-size: 3.2rem;
+      font-size: 4.5rem;
+    }
+  }
+  .certificates {
+    &__title {
+      font-size: 4.5rem;
     }
   }
   .equipment {
     &__title {
-      font-size: 3.2rem;
+      font-size: 4.5rem;
     }
     &__card {
       &-img {
         &-text {
           &-title {
-            font-size: 3rem;
+            font-size: 3.5rem;
           }
         }
       }
+    }
+  }
+  .gallery {
+    &__title {
+      font-size: 4.5rem;
+    }
+  }
+  .contact {
+    &__title {
+      font-size: 4.5rem;
     }
   }
 }

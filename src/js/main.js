@@ -11,6 +11,13 @@ const headerHero = document.querySelector(".header-hero");
 const closePopupBtn = document.querySelectorAll(
   ".gallery__accordion-card-popup-close"
 );
+const certificatesPopupBtn = document.querySelectorAll(
+  ".certificates__popup-close"
+);
+const certificatesPopupBg = document.querySelectorAll(
+  ".certificates__popup-bg"
+);
+const certificatesBtn = document.querySelectorAll(".certificates__card-btn");
 const popupBg = document.querySelectorAll(".gallery__accordion-card-popup-bg");
 const footerSpan = document.querySelector(".footer__down-span");
 const scrollbtn = document.querySelector(".scroll-up");
@@ -127,6 +134,32 @@ imgBtn.forEach((e) => {
     acordionBtn.forEach((btn) => btn.classList.add("opacity"));
   });
 });
+certificatesBtn.forEach((e) => {
+  e.addEventListener("click", () => {
+    document.body.appendChild(style);
+    e.previousElementSibling.classList.remove("animation-hide");
+    e.previousElementSibling.classList.add("active-popup");
+    e.previousElementSibling.classList.add("animation-show");
+    scrollbtn.classList.add("opacity");
+    headerHero.classList.remove("margin-top");
+    mobileNav.classList.remove("fixed");
+    desktopNav.classList.remove("fixed");
+    acordionBtn.forEach((btn) => btn.classList.add("opacity"));
+  });
+});
+certificatesPopupBtn.forEach((e) => {
+  e.addEventListener("click", () => {
+    document.body.removeChild(style);
+    e.parentElement.classList.add("animation-hide");
+    e.parentElement.classList.remove("animation-show");
+    scrollbtn.classList.remove("opacity");
+    headerHero.classList.add("margin-top");
+    acordionBtn.forEach((btn) => btn.classList.remove("opacity"));
+    e.parentElement.classList.remove("active-popup");
+    mobileNav.classList.add("fixed");
+    desktopNav.classList.add("fixed");
+  });
+});
 closePopupBtn.forEach((e) => {
   e.addEventListener("click", () => {
     document.body.removeChild(style);
@@ -138,6 +171,20 @@ closePopupBtn.forEach((e) => {
     e.parentElement.classList.remove("active-popup");
     mobileNav.classList.add("fixed");
     desktopNav.classList.add("fixed");
+  });
+});
+certificatesPopupBg.forEach((e) => {
+  e.addEventListener("click", () => {
+    document.body.removeChild(style);
+    e.parentElement.classList.add("animation-hide");
+    e.parentElement.classList.remove("animation-show");
+    scrollbtn.classList.remove("opacity");
+    headerHero.classList.add("margin-top");
+    mobileNav.classList.add("fixed");
+    desktopNav.classList.add("fixed");
+    acordionBtn.forEach((btn) => btn.classList.remove("opacity"));
+
+    e.parentElement.classList.remove("active-popup");
   });
 });
 popupBg.forEach((e) => {

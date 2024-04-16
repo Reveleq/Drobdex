@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/dist/css/main.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="dist/img/logo-jasne.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -13,7 +14,7 @@
     <title>Elementy do palet | DROBDEX</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="header__box">
         <div class="header__card header__card-contact">
           <img
@@ -47,11 +48,40 @@
         </div>
       </div>
       <nav class="desktop-nav">
-        <a class="desktop-nav__link" href="#o-nas">O nas</a>
-        <a class="desktop-nav__link" href="#historia">Historia</a>
-        <a class="desktop-nav__link" href="#oferta">Oferta</a>
-        <a class="desktop-nav__link" href="#wyposazenie">Wyposazenie</a>
-        <a class="desktop-nav__link" href="#galeria">Galeria</a>
+        <li class="desktop-nav__special-link">
+          <a href="#o-nas" class="desktop-nav__link"> O nas</a>
+          <img
+            class="desktop-nav__history-link-img"
+            src="dist/img/icons/chevron-down.svg"
+            alt="ikonka pokazująca rozwijalną nawigacje"
+          />
+          <ul class="desktop-nav__special-link-list">
+            <li class="desktop-nav__special-link-li">
+              <a class="desktop-nav__special-link-a" href="#historia"
+                >Historia</a
+              >
+            </li>
+            <li class="desktop-nav__special-link-li">
+              <a class="desktop-nav__special-link-a" href="#galeria">Galeria</a>
+            </li>
+          </ul>
+        </li>
+        <li class="desktop-nav__special-link">
+          <a href="#oferta" class="desktop-nav__link"> Oferta</a>
+          <img
+            class="desktop-nav__history-link-img"
+            src="dist/img/icons/chevron-down.svg"
+            alt="ikonka pokazująca rozwijalną nawigacje"
+          />
+          <ul class="desktop-nav__special-link-list">
+            <li class="desktop-nav__special-link-li">
+              <a class="desktop-nav__special-link-a" href="#wyposazenie"
+                >Wyposazenie</a
+              >
+            </li>
+          </ul>
+        </li>
+        <a class="desktop-nav__link" href="#certyfikaty">Certyfikaty</a>
         <a class="desktop-nav__link" href="#kontakt">Kontakt</a>
       </nav>
       <nav class="mobile-nav">
@@ -74,9 +104,10 @@
           </button>
           <a class="mobile-nav__link" href="#o-nas">O nas</a>
           <a class="mobile-nav__link" href="#historia">Historia</a>
+          <a class="mobile-nav__link" href="#galeria">Galeria</a>
           <a class="mobile-nav__link" href="#oferta">Oferta</a>
           <a class="mobile-nav__link" href="#wyposazenie">Wyposazenie</a>
-          <a class="mobile-nav__link" href="#galeria">Galeria</a>
+          <a class="mobile-nav__link" href="#certyfikaty">Certyfikaty</a>
           <a class="mobile-nav__link" href="#kontakt">Kontakt</a>
         </div>
       </nav>
@@ -106,94 +137,445 @@
       </div>
       <section class="about-us" id="o-nas">
         <h3 class="about-us__title">O nas</h3>
-        <img
-          class="about-us__bg-icon about-us__bg-icon-round-wood bg-icon"
-          src="/dist/img/round-wood.png"
-          alt="ikonka przeciętego drewna pionowo"
-        />
-        <img
-          class="about-us__bg-icon about-us__bg-icon-horizontal-pallete bg-icon"
-          src="/dist/img/horizontal-palette.png"
-          alt="ikonka przeciętego palety pionowo"
-        />
-        <img
-          class="about-us__bg-icon about-us__bg-icon-vertical-pallete bg-icon"
-          src="/dist/img/vertical-palette.png"
-          alt="ikonka przeciętego drewna poziomo"
-        />
         <div class="wrapper">
           <div class="about-us__box">
             <img
               class="about-us__img"
-              src="dist/img/about-us.jpg"
+              src="dist/img/about-us.jpeg"
               alt="cięzarówka na tle hali produkcyjnej"
             />
-            <p class="about-us__text">
-              Firma zajmuje się produkcją elementów drzewnych do palet z
-              okrągłego drewna. Przedsiębiorstwo sprzedaje elementy drewniane
-              oraz powstałe trociny i zrębki jako biomasę DROBDEX obsługuje
-              głównie stałych kontrahentów, których grono stale się powiększa.
-              Zatrudnia pracowników fizycznych do obróbki drewna oraz kierowców
-              samochodów ciężarowych.
-            </p>
+            <div class="about-us__text">
+              <h4 class="about-us__text-title">"Drobdex"</h4>
+              <p class="about-us__text-p">
+                Firma zajmuje się produkcją elementów drzewnych do palet z
+                okrągłego drewna. Przedsiębiorstwo sprzedaje elementy drewniane
+                oraz powstałe trociny i zrębki jako biomasę DROBDEX obsługuje
+                głównie stałych kontrahentów, których grono stale się powiększa.
+                Zatrudnia pracowników fizycznych do obróbki drewna oraz
+                kierowców samochodów ciężarowych.
+              </p>
+            </div>
           </div>
         </div>
       </section>
       <section id="historia" class="history">
-        <div class="history__img">
-          <div class="history__bg"></div>
-          <div class="history__header">
-            <h3 class="history__title">Historia</h3>
+        <!-- <div class="history__bg"></div> -->
+        <h3 class="history__title">Historia</h3>
+        <!-- </div> -->
+        <div class="wrapper">
+          <div class="history__box">
+            <div class="history__card">
+              <!-- <img
+                  class="history__pin"
+                  src="/dist/img/pin.png"
+                  alt="pinezka"
+                /> -->
+              <h4 class="history__card-text-header">Początek</h4>
+              <p class="history__card-text">
+                Firma DROBDEX powstała w 1992 roku w Kojszówce, w województwie
+                małopolskim. Najpierw była małym zakładem zatrudniającym kilku
+                pracowników i zajmującym niewielkie pomieszczenia w garażach
+                koło domu właściciela.
+              </p>
+            </div>
+            <div class="history__card">
+              <!-- <img
+                  class="history__pin"
+                  src="/dist/img/pin.png"
+                  alt="pinezka"
+                /> -->
+              <h4 class="history__card-text-header">2009 r.</h4>
+
+              <p class="history__card-text">
+                W 2009 roku została wybudowana hala produkcyjna, na której
+                zamontowano dwie linie do przecierania drewna wyposażone w
+                traki, wielopiły, kapownice. Pozwalały one na obróbkę większej
+                ilości drewna. Oczywiście powiększyła się również załoga firmy.
+              </p>
+            </div>
+            <div class="history__card">
+              <!-- <img
+                  class="history__pin"
+                  src="/dist/img/pin.png"
+                  alt="pinezka"
+                /> -->
+              <h4 class="history__card-text-header">2020 r.</h4>
+
+              <p class="history__card-text">
+                W 2020 roku zmodernizowano linie produkcyjne, w których pojawiły
+                się nowoczesne maszyny. Dbając o dobro swoich pracowników oddano
+                do użytku nowy budynek socjalny, w którym znajdują się
+                nowoczesne szatnie, pomieszczenia sanitarne oraz jadalnia.
+              </p>
+            </div>
           </div>
-          <div class="wrapper">
-            <div class="history__box">
-              <div class="history__card">
+        </div>
+      </section>
+      <section class="gallery" id="galeria">
+        <h3 class="gallery__title">Galeria</h3>
+        <div class="wrapper">
+          <div class="gallery__accordion">
+            <div class="gallery__accordion-box">
+              <button class="gallery__accordion-btn">
+                Flota Transportowa
                 <img
-                  class="history__pin"
-                  src="/dist/img/pin.png"
-                  alt="pinezka"
+                  class="gallery__accordion-icon"
+                  src="/dist/img/icons/chevron-down.svg"
+                  alt="ikonka strzałki w dół"
                 />
-                <p class="history__card-text">
-                  Firma DROBDEX powstała w 1992 roku w Kojszówce, w województwie
-                  małopolskim. Najpierw była małym zakładem zatrudniającym kilku
-                  pracowników i zajmującym niewielkie pomieszczenia w garażach
-                  koło domu właściciela.
-                </p>
+              </button>
+              <div class="gallery__accordion-card active">
+                <!-- <img
+                  class="bg-icon gallery__accordion-card-bg-icon-horizontal-pallete"
+                  src="/dist/img/horizontal-palette.png"
+                  alt="ikonka przeciętego palety pionowo"
+                />
+                <img
+                  class="bg-icon gallery__accordion-card-bg-icon-vertical-pallete"
+                  src="/dist/img/vertical-palette.png"
+                  alt="ikonka przeciętego drewna poziomo"
+                /> -->
+                <div class="gallery__accordion-card-box">
+                  <div class="gallery__accordion-card-link">
+                    <div class="gallery__accordion-card-popup">
+                      <button class="gallery__accordion-card-popup-close">
+                        <img
+                          class="gallery__accordion-card-popup-close-img"
+                          src="/dist//img/icons/x-white.svg"
+                          alt="ikonka 'X'"
+                        />
+                      </button>
+                      <div class="gallery__accordion-card-popup-bg"></div>
+                      <img
+                        class="gallery__accordion-card-popup-img gallery__accordion-first"
+                        src="dist/img/header-hero-img.jpeg"
+                        alt="zdjeęcie składowiska desek"
+                      />
+                    </div>
+                    <button class="gallery__accordion-card-btn">
+                      <img
+                        class="gallery__accordion-card-img"
+                        src="/dist/img/header-hero-img.jpeg"
+                        alt="zdjeęcie składowiska desek"
+                      />
+                    </button>
+                  </div>
+                  <div class="gallery__accordion-card-link">
+                    <div class="gallery__accordion-card-popup">
+                      <button class="gallery__accordion-card-popup-close">
+                        <img
+                          class="gallery__accordion-card-popup-close-img"
+                          src="/dist//img/icons/x-white.svg"
+                          alt="ikonka 'X'"
+                        />
+                      </button>
+                      <div class="gallery__accordion-card-popup-bg"></div>
+                      <img
+                        class="gallery__accordion-card-popup-img gallery__accordion-first"
+                        src="dist/img/header-hero-img.jpeg"
+                        alt="zdjeęcie składowiska desek"
+                      />
+                    </div>
+                    <button class="gallery__accordion-card-btn">
+                      <img
+                        class="gallery__accordion-card-img"
+                        src="/dist/img/header-hero-img.jpeg"
+                        alt="zdjeęcie składowiska desek"
+                      />
+                    </button>
+                  </div>
+                  <div class="gallery__accordion-card-link">
+                    <div class="gallery__accordion-card-popup">
+                      <button class="gallery__accordion-card-popup-close">
+                        <img
+                          class="gallery__accordion-card-popup-close-img"
+                          src="/dist//img/icons/x-white.svg"
+                        />
+                      </button>
+                      <div class="gallery__accordion-card-popup-bg"></div>
+                      <img
+                        class="gallery__accordion-card-popup-img gallery__accordion-first"
+                        src="dist/img/production-line.jpeg"
+                        alt="zdjęcie desek paletowych"
+                      />
+                    </div>
+                    <button class="gallery__accordion-card-btn">
+                      <img
+                        class="gallery__accordion-card-img"
+                        src="/dist/img/header-hero-img.jpeg"
+                        alt="zdjęcie desek paletowych"
+                      />
+                    </button>
+                  </div>
+                  <div class="gallery__accordion-card-link">
+                    <div class="gallery__accordion-card-popup">
+                      <button class="gallery__accordion-card-popup-close">
+                        <img
+                          class="gallery__accordion-card-popup-close-img"
+                          src="/dist//img/icons/x-white.svg"
+                          alt="ikonka 'X'"
+                        />
+                      </button>
+                      <div class="gallery__accordion-card-popup-bg"></div>
+                      <img
+                        class="gallery__accordion-card-popup-img gallery__accordion-first"
+                        src="dist/img/header-hero-img.jpeg"
+                        alt="zdjeęcie składowiska desek"
+                      />
+                    </div>
+                    <button class="gallery__accordion-card-btn">
+                      <img
+                        class="gallery__accordion-card-img"
+                        src="/dist/img/header-hero-img.jpeg"
+                        alt="zdjeęcie składowiska desek"
+                      />
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div class="history__card">
+            </div>
+            <div class="gallery__accordion-box">
+              <button
+                class="gallery__accordion-btn gallery__accordion-btn--second"
+              >
+                Flota
                 <img
-                  class="history__pin"
-                  src="/dist/img/pin.png"
-                  alt="pinezka"
+                  class="gallery__accordion-icon"
+                  src="/dist/img/icons/chevron-down.svg"
+                  alt="ikonka strzałki w dół"
                 />
-                <p class="history__card-text">
-                  W 2009 roku została wybudowana hala produkcyjna, na której
-                  zamontowano dwie linie do przecierania drewna wyposażone w
-                  traki, wielopiły, kapownice. Pozwalały one na obróbkę większej
-                  ilości drewna. Oczywiście powiększyła się również załoga
-                  firmy.
-                </p>
+              </button>
+              <div class="gallery__accordion-card">
+                <!-- <img
+                  class="bg-icon gallery__accordion-card-bg-icon-horizontal-pallete"
+                  src="/dist/img/horizontal-palette.png"
+                  alt="ikonka przeciętego palety pionowo"
+                />
+                <img
+                  class="bg-icon gallery__accordion-card-bg-icon-vertical-pallete"
+                  src="/dist/img/vertical-palette.png"
+                  alt="ikonka przeciętego drewna poziomo"
+                /> -->
+                <div class="gallery__accordion-card-box">
+                  <div class="gallery__accordion-card-link">
+                    <div class="gallery__accordion-card-popup">
+                      <button class="gallery__accordion-card-popup-close">
+                        <img
+                          class="gallery__accordion-card-popup-close-img"
+                          src="/dist//img/icons/x-white.svg"
+                          alt="ikonka 'X'"
+                        />
+                      </button>
+                      <div class="gallery__accordion-card-popup-bg"></div>
+                      <img
+                        class="gallery__accordion-card-popup-img"
+                        src="dist/img/header-hero-img.jpeg"
+                        alt="zdjeęcie składowiska desek"
+                      />
+                    </div>
+                    <button class="gallery__accordion-card-btn">
+                      <img
+                        class="gallery__accordion-card-img"
+                        src="/dist/img/header-hero-img.jpeg"
+                        alt="zdjeęcie składowiska desek"
+                      />
+                    </button>
+                  </div>
+                  <div class="gallery__accordion-card-link">
+                    <div class="gallery__accordion-card-popup">
+                      <button class="gallery__accordion-card-popup-close">
+                        <img
+                          class="gallery__accordion-card-popup-close-img"
+                          src="/dist//img/icons/x-white.svg"
+                          alt="ikonka 'X'"
+                        />
+                      </button>
+                      <div class="gallery__accordion-card-popup-bg"></div>
+                      <img
+                        class="gallery__accordion-card-popup-img"
+                        src="dist/img/header-hero-img.jpeg"
+                        alt="zdjeęcie składowiska desek"
+                      />
+                    </div>
+                    <button class="gallery__accordion-card-btn">
+                      <img
+                        class="gallery__accordion-card-img"
+                        src="/dist/img/header-hero-img.jpeg"
+                        alt="zdjeęcie składowiska desek"
+                      />
+                    </button>
+                  </div>
+                  <div class="gallery__accordion-card-link">
+                    <div class="gallery__accordion-card-popup">
+                      <button class="gallery__accordion-card-popup-close">
+                        <img
+                          class="gallery__accordion-card-popup-close-img"
+                          src="/dist//img/icons/x-white.svg"
+                        />
+                      </button>
+                      <div class="gallery__accordion-card-popup-bg"></div>
+                      <img
+                        class="gallery__accordion-card-popup-img"
+                        src="dist/img/production-line.jpeg"
+                        alt="zdjęcie desek paletowych"
+                      />
+                    </div>
+                    <button class="gallery__accordion-card-btn">
+                      <img
+                        class="gallery__accordion-card-img"
+                        src="/dist/img/header-hero-img.jpeg"
+                        alt="zdjęcie desek paletowych"
+                      />
+                    </button>
+                  </div>
+                  <div class="gallery__accordion-card-link">
+                    <div class="gallery__accordion-card-popup">
+                      <button class="gallery__accordion-card-popup-close">
+                        <img
+                          class="gallery__accordion-card-popup-close-img"
+                          src="/dist//img/icons/x-white.svg"
+                          alt="ikonka 'X'"
+                        />
+                      </button>
+                      <div class="gallery__accordion-card-popup-bg"></div>
+                      <img
+                        class="gallery__accordion-card-popup-img"
+                        src="dist/img/header-hero-img.jpeg"
+                        alt="zdjeęcie składowiska desek"
+                      />
+                    </div>
+                    <button class="gallery__accordion-card-btn">
+                      <img
+                        class="gallery__accordion-card-img"
+                        src="/dist/img/header-hero-img.jpeg"
+                        alt="zdjeęcie składowiska desek"
+                      />
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div class="history__card">
+            </div>
+            <div class="gallery__accordion-box">
+              <button class="gallery__accordion-btn">
+                Flota
                 <img
-                  class="history__pin"
-                  src="/dist/img/pin.png"
-                  alt="pinezka"
+                  class="gallery__accordion-icon"
+                  src="/dist/img/icons/chevron-down.svg"
+                  alt="ikonka strzałki w dół"
                 />
-                <p class="history__card-text">
-                  W 2020 roku zmodernizowano linie produkcyjne, w których
-                  pojawiły się nowoczesne maszyny. Dbając o dobro swoich
-                  pracowników oddano do użytku nowy budynek socjalny, w którym
-                  znajdują się nowoczesne szatnie, pomieszczenia sanitarne oraz
-                  jadalnia.
-                </p>
+              </button>
+              <div class="gallery__accordion-card">
+                <!-- <img
+                  class="bg-icon gallery__accordion-card-bg-icon-horizontal-pallete"
+                  src="/dist/img/horizontal-palette.png"
+                  alt="ikonka przeciętego palety pionowo"
+                />
+                <img
+                  class="bg-icon gallery__accordion-card-bg-icon-vertical-pallete"
+                  src="/dist/img/vertical-palette.png"
+                  alt="ikonka przeciętego drewna poziomo"
+                /> -->
+                <div class="gallery__accordion-card-box">
+                  <div class="gallery__accordion-card-link">
+                    <div class="gallery__accordion-card-popup">
+                      <button class="gallery__accordion-card-popup-close">
+                        <img
+                          class="gallery__accordion-card-popup-close-img"
+                          src="/dist//img/icons/x-white.svg"
+                        />
+                      </button>
+                      <div class="gallery__accordion-card-popup-bg"></div>
+                      <img
+                        class="gallery__accordion-card-popup-img"
+                        src="dist/img/production-line.jpeg"
+                        alt="zdjęcie desek paletowych"
+                      />
+                    </div>
+                    <button class="gallery__accordion-card-btn">
+                      <img
+                        class="gallery__accordion-card-img"
+                        src="/dist/img/header-hero-img.jpeg"
+                        alt="zdjęcie desek paletowych"
+                      />
+                    </button>
+                  </div>
+                  <div class="gallery__accordion-card-link">
+                    <div class="gallery__accordion-card-popup">
+                      <button class="gallery__accordion-card-popup-close">
+                        <img
+                          class="gallery__accordion-card-popup-close-img"
+                          src="/dist//img/icons/x-white.svg"
+                        />
+                      </button>
+                      <div class="gallery__accordion-card-popup-bg"></div>
+                      <img
+                        class="gallery__accordion-card-popup-img"
+                        src="dist/img/production-line.jpeg"
+                        alt="zdjęcie desek paletowych"
+                      />
+                    </div>
+                    <button class="gallery__accordion-card-btn">
+                      <img
+                        class="gallery__accordion-card-img"
+                        src="/dist/img/header-hero-img.jpeg"
+                        alt="zdjęcie desek paletowych"
+                      />
+                    </button>
+                  </div>
+                  <div class="gallery__accordion-card-link">
+                    <div class="gallery__accordion-card-popup">
+                      <button class="gallery__accordion-card-popup-close">
+                        <img
+                          class="gallery__accordion-card-popup-close-img"
+                          src="/dist//img/icons/x-white.svg"
+                        />
+                      </button>
+                      <div class="gallery__accordion-card-popup-bg"></div>
+                      <img
+                        class="gallery__accordion-card-popup-img"
+                        src="dist/img/production-line.jpeg"
+                        alt="zdjęcie desek paletowych"
+                      />
+                    </div>
+                    <button class="gallery__accordion-card-btn">
+                      <img
+                        class="gallery__accordion-card-img"
+                        src="/dist/img/header-hero-img.jpeg"
+                        alt="zdjęcie desek paletowych"
+                      />
+                    </button>
+                  </div>
+                  <div class="gallery__accordion-card-link">
+                    <div class="gallery__accordion-card-popup">
+                      <button class="gallery__accordion-card-popup-close">
+                        <img
+                          class="gallery__accordion-card-popup-close-img"
+                          src="/dist//img/icons/x-white.svg"
+                        />
+                      </button>
+                      <div class="gallery__accordion-card-popup-bg"></div>
+                      <img
+                        class="gallery__accordion-card-popup-img"
+                        src="dist/img/production-line.jpeg"
+                        alt="zdjęcie desek paletowych"
+                      />
+                    </div>
+                    <button class="gallery__accordion-card-btn">
+                      <img
+                        class="gallery__accordion-card-img"
+                        src="/dist/img/header-hero-img.jpeg"
+                        alt="zdjęcie desek paletowych"
+                      />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section id="oferta" class="offer">
-        <img
+        <!-- <img
           class="bg-icon offer__bg-icon-round-wood"
           src="/dist/img/round-wood.png"
           alt="ikonka przeciętego drewna pionowo"
@@ -207,7 +589,7 @@
           class="bg-icon offer__bg-icon-vertical-pallete"
           src="/dist/img/vertical-palette.png"
           alt="ikonka przeciętego drewna poziomo"
-        />
+        /> -->
         <div class="wrapper">
           <h3 class="offer__title">Oferta</h3>
           <div class="offer__cards">
@@ -413,365 +795,33 @@
           </div>
         </div>
       </section>
-      <section class="gallery" id="galeria">
-        <h3 class="gallery__title">Galeria</h3>
+      <section class="certificates" id="certyfikaty">
+        <h3 class="certificates__title">Certyfikaty</h3>
         <div class="wrapper">
-          <div class="gallery__accordion">
-            <div class="gallery__accordion-box">
-              <button class="gallery__accordion-btn">
-                Flota Transportowa
+          <div class="certificates__box">
+            <div class="certificates__card">
+              <h4 class="certificates__card-title">Epal-2345</h4>
+              <img
+                class="certificates__card-icon"
+                src="dist/img/icons/box.svg"
+                alt=""
+              />
+              <div class="certificates__popup">
+                <button class="certificates__popup-close">
+                  <img
+                    class="certificates__popup-close-img"
+                    src="/dist//img/icons/x-white.svg"
+                    alt="ikonka 'X'"
+                  />
+                </button>
+                <div class="certificates__popup-bg"></div>
                 <img
-                  class="gallery__accordion-icon"
-                  src="/dist/img/icons/chevron-down.svg"
-                  alt="ikonka strzałki w dół"
+                  class="certificates__popup-img certificates__popup-first"
+                  src="dist/img/header-hero-img.jpeg"
+                  alt="zdjeęcie składowiska desek"
                 />
-              </button>
-              <div class="gallery__accordion-card active">
-                <img
-                  class="bg-icon gallery__accordion-card-bg-icon-horizontal-pallete"
-                  src="/dist/img/horizontal-palette.png"
-                  alt="ikonka przeciętego palety pionowo"
-                />
-                <img
-                  class="bg-icon gallery__accordion-card-bg-icon-vertical-pallete"
-                  src="/dist/img/vertical-palette.png"
-                  alt="ikonka przeciętego drewna poziomo"
-                />
-                <div class="gallery__accordion-card-box">
-                  <div class="gallery__accordion-card-link">
-                    <div class="gallery__accordion-card-popup">
-                      <button class="gallery__accordion-card-popup-close">
-                        <img
-                          class="gallery__accordion-card-popup-close-img"
-                          src="/dist//img/icons/x-white.svg"
-                          alt="ikonka 'X'"
-                        />
-                      </button>
-                      <div class="gallery__accordion-card-popup-bg"></div>
-                      <img
-                        class="gallery__accordion-card-popup-img gallery__accordion-first"
-                        src="dist/img/header-hero-img.jpeg"
-                        alt="zdjeęcie składowiska desek"
-                      />
-                    </div>
-                    <button class="gallery__accordion-card-btn">
-                      <img
-                        class="gallery__accordion-card-img"
-                        src="/dist/img/header-hero-img.jpeg"
-                        alt="zdjeęcie składowiska desek"
-                      />
-                    </button>
-                  </div>
-                  <div class="gallery__accordion-card-link">
-                    <div class="gallery__accordion-card-popup">
-                      <button class="gallery__accordion-card-popup-close">
-                        <img
-                          class="gallery__accordion-card-popup-close-img"
-                          src="/dist//img/icons/x-white.svg"
-                          alt="ikonka 'X'"
-                        />
-                      </button>
-                      <div class="gallery__accordion-card-popup-bg"></div>
-                      <img
-                        class="gallery__accordion-card-popup-img gallery__accordion-first"
-                        src="dist/img/header-hero-img.jpeg"
-                        alt="zdjeęcie składowiska desek"
-                      />
-                    </div>
-                    <button class="gallery__accordion-card-btn">
-                      <img
-                        class="gallery__accordion-card-img"
-                        src="/dist/img/header-hero-img.jpeg"
-                        alt="zdjeęcie składowiska desek"
-                      />
-                    </button>
-                  </div>
-                  <div class="gallery__accordion-card-link">
-                    <div class="gallery__accordion-card-popup">
-                      <button class="gallery__accordion-card-popup-close">
-                        <img
-                          class="gallery__accordion-card-popup-close-img"
-                          src="/dist//img/icons/x-white.svg"
-                        />
-                      </button>
-                      <div class="gallery__accordion-card-popup-bg"></div>
-                      <img
-                        class="gallery__accordion-card-popup-img gallery__accordion-first"
-                        src="dist/img/production-line.jpeg"
-                        alt="zdjęcie desek paletowych"
-                      />
-                    </div>
-                    <button class="gallery__accordion-card-btn">
-                      <img
-                        class="gallery__accordion-card-img"
-                        src="/dist/img/header-hero-img.jpeg"
-                        alt="zdjęcie desek paletowych"
-                      />
-                    </button>
-                  </div>
-                  <div class="gallery__accordion-card-link">
-                    <div class="gallery__accordion-card-popup">
-                      <button class="gallery__accordion-card-popup-close">
-                        <img
-                          class="gallery__accordion-card-popup-close-img"
-                          src="/dist//img/icons/x-white.svg"
-                          alt="ikonka 'X'"
-                        />
-                      </button>
-                      <div class="gallery__accordion-card-popup-bg"></div>
-                      <img
-                        class="gallery__accordion-card-popup-img gallery__accordion-first"
-                        src="dist/img/header-hero-img.jpeg"
-                        alt="zdjeęcie składowiska desek"
-                      />
-                    </div>
-                    <button class="gallery__accordion-card-btn">
-                      <img
-                        class="gallery__accordion-card-img"
-                        src="/dist/img/header-hero-img.jpeg"
-                        alt="zdjeęcie składowiska desek"
-                      />
-                    </button>
-                  </div>
-                </div>
               </div>
-            </div>
-            <div class="gallery__accordion-box">
-              <button
-                class="gallery__accordion-btn gallery__accordion-btn--second"
-              >
-                Flota
-                <img
-                  class="gallery__accordion-icon"
-                  src="/dist/img/icons/chevron-down.svg"
-                  alt="ikonka strzałki w dół"
-                />
-              </button>
-              <div class="gallery__accordion-card">
-                <img
-                  class="bg-icon gallery__accordion-card-bg-icon-horizontal-pallete"
-                  src="/dist/img/horizontal-palette.png"
-                  alt="ikonka przeciętego palety pionowo"
-                />
-                <img
-                  class="bg-icon gallery__accordion-card-bg-icon-vertical-pallete"
-                  src="/dist/img/vertical-palette.png"
-                  alt="ikonka przeciętego drewna poziomo"
-                />
-                <div class="gallery__accordion-card-box">
-                  <div class="gallery__accordion-card-link">
-                    <div class="gallery__accordion-card-popup">
-                      <button class="gallery__accordion-card-popup-close">
-                        <img
-                          class="gallery__accordion-card-popup-close-img"
-                          src="/dist//img/icons/x-white.svg"
-                          alt="ikonka 'X'"
-                        />
-                      </button>
-                      <div class="gallery__accordion-card-popup-bg"></div>
-                      <img
-                        class="gallery__accordion-card-popup-img"
-                        src="dist/img/header-hero-img.jpeg"
-                        alt="zdjeęcie składowiska desek"
-                      />
-                    </div>
-                    <button class="gallery__accordion-card-btn">
-                      <img
-                        class="gallery__accordion-card-img"
-                        src="/dist/img/header-hero-img.jpeg"
-                        alt="zdjeęcie składowiska desek"
-                      />
-                    </button>
-                  </div>
-                  <div class="gallery__accordion-card-link">
-                    <div class="gallery__accordion-card-popup">
-                      <button class="gallery__accordion-card-popup-close">
-                        <img
-                          class="gallery__accordion-card-popup-close-img"
-                          src="/dist//img/icons/x-white.svg"
-                          alt="ikonka 'X'"
-                        />
-                      </button>
-                      <div class="gallery__accordion-card-popup-bg"></div>
-                      <img
-                        class="gallery__accordion-card-popup-img"
-                        src="dist/img/header-hero-img.jpeg"
-                        alt="zdjeęcie składowiska desek"
-                      />
-                    </div>
-                    <button class="gallery__accordion-card-btn">
-                      <img
-                        class="gallery__accordion-card-img"
-                        src="/dist/img/header-hero-img.jpeg"
-                        alt="zdjeęcie składowiska desek"
-                      />
-                    </button>
-                  </div>
-                  <div class="gallery__accordion-card-link">
-                    <div class="gallery__accordion-card-popup">
-                      <button class="gallery__accordion-card-popup-close">
-                        <img
-                          class="gallery__accordion-card-popup-close-img"
-                          src="/dist//img/icons/x-white.svg"
-                        />
-                      </button>
-                      <div class="gallery__accordion-card-popup-bg"></div>
-                      <img
-                        class="gallery__accordion-card-popup-img"
-                        src="dist/img/production-line.jpeg"
-                        alt="zdjęcie desek paletowych"
-                      />
-                    </div>
-                    <button class="gallery__accordion-card-btn">
-                      <img
-                        class="gallery__accordion-card-img"
-                        src="/dist/img/header-hero-img.jpeg"
-                        alt="zdjęcie desek paletowych"
-                      />
-                    </button>
-                  </div>
-                  <div class="gallery__accordion-card-link">
-                    <div class="gallery__accordion-card-popup">
-                      <button class="gallery__accordion-card-popup-close">
-                        <img
-                          class="gallery__accordion-card-popup-close-img"
-                          src="/dist//img/icons/x-white.svg"
-                          alt="ikonka 'X'"
-                        />
-                      </button>
-                      <div class="gallery__accordion-card-popup-bg"></div>
-                      <img
-                        class="gallery__accordion-card-popup-img"
-                        src="dist/img/header-hero-img.jpeg"
-                        alt="zdjeęcie składowiska desek"
-                      />
-                    </div>
-                    <button class="gallery__accordion-card-btn">
-                      <img
-                        class="gallery__accordion-card-img"
-                        src="/dist/img/header-hero-img.jpeg"
-                        alt="zdjeęcie składowiska desek"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="gallery__accordion-box">
-              <button class="gallery__accordion-btn">
-                Flota
-                <img
-                  class="gallery__accordion-icon"
-                  src="/dist/img/icons/chevron-down.svg"
-                  alt="ikonka strzałki w dół"
-                />
-              </button>
-              <div class="gallery__accordion-card">
-                <img
-                  class="bg-icon gallery__accordion-card-bg-icon-horizontal-pallete"
-                  src="/dist/img/horizontal-palette.png"
-                  alt="ikonka przeciętego palety pionowo"
-                />
-                <img
-                  class="bg-icon gallery__accordion-card-bg-icon-vertical-pallete"
-                  src="/dist/img/vertical-palette.png"
-                  alt="ikonka przeciętego drewna poziomo"
-                />
-                <div class="gallery__accordion-card-box">
-                  <div class="gallery__accordion-card-link">
-                    <div class="gallery__accordion-card-popup">
-                      <button class="gallery__accordion-card-popup-close">
-                        <img
-                          class="gallery__accordion-card-popup-close-img"
-                          src="/dist//img/icons/x-white.svg"
-                        />
-                      </button>
-                      <div class="gallery__accordion-card-popup-bg"></div>
-                      <img
-                        class="gallery__accordion-card-popup-img"
-                        src="dist/img/production-line.jpeg"
-                        alt="zdjęcie desek paletowych"
-                      />
-                    </div>
-                    <button class="gallery__accordion-card-btn">
-                      <img
-                        class="gallery__accordion-card-img"
-                        src="/dist/img/header-hero-img.jpeg"
-                        alt="zdjęcie desek paletowych"
-                      />
-                    </button>
-                  </div>
-                  <div class="gallery__accordion-card-link">
-                    <div class="gallery__accordion-card-popup">
-                      <button class="gallery__accordion-card-popup-close">
-                        <img
-                          class="gallery__accordion-card-popup-close-img"
-                          src="/dist//img/icons/x-white.svg"
-                        />
-                      </button>
-                      <div class="gallery__accordion-card-popup-bg"></div>
-                      <img
-                        class="gallery__accordion-card-popup-img"
-                        src="dist/img/production-line.jpeg"
-                        alt="zdjęcie desek paletowych"
-                      />
-                    </div>
-                    <button class="gallery__accordion-card-btn">
-                      <img
-                        class="gallery__accordion-card-img"
-                        src="/dist/img/header-hero-img.jpeg"
-                        alt="zdjęcie desek paletowych"
-                      />
-                    </button>
-                  </div>
-                  <div class="gallery__accordion-card-link">
-                    <div class="gallery__accordion-card-popup">
-                      <button class="gallery__accordion-card-popup-close">
-                        <img
-                          class="gallery__accordion-card-popup-close-img"
-                          src="/dist//img/icons/x-white.svg"
-                        />
-                      </button>
-                      <div class="gallery__accordion-card-popup-bg"></div>
-                      <img
-                        class="gallery__accordion-card-popup-img"
-                        src="dist/img/production-line.jpeg"
-                        alt="zdjęcie desek paletowych"
-                      />
-                    </div>
-                    <button class="gallery__accordion-card-btn">
-                      <img
-                        class="gallery__accordion-card-img"
-                        src="/dist/img/header-hero-img.jpeg"
-                        alt="zdjęcie desek paletowych"
-                      />
-                    </button>
-                  </div>
-                  <div class="gallery__accordion-card-link">
-                    <div class="gallery__accordion-card-popup">
-                      <button class="gallery__accordion-card-popup-close">
-                        <img
-                          class="gallery__accordion-card-popup-close-img"
-                          src="/dist//img/icons/x-white.svg"
-                        />
-                      </button>
-                      <div class="gallery__accordion-card-popup-bg"></div>
-                      <img
-                        class="gallery__accordion-card-popup-img"
-                        src="dist/img/production-line.jpeg"
-                        alt="zdjęcie desek paletowych"
-                      />
-                    </div>
-                    <button class="gallery__accordion-card-btn">
-                      <img
-                        class="gallery__accordion-card-img"
-                        src="/dist/img/header-hero-img.jpeg"
-                        alt="zdjęcie desek paletowych"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
+              <button class="certificates__card-btn">Zobacz</button>
             </div>
           </div>
         </div>
