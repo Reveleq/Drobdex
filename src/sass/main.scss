@@ -251,7 +251,6 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-image: url("/dist/img/header-hero-img.jpeg");
   }
   &__bg {
     position: absolute;
@@ -638,10 +637,6 @@ body {
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
-      transition: transform .3s;
-      &:hover{
-        transform: scale(1.01);
-      }
     &-title {
       padding: 1em;
       text-align: center;
@@ -710,7 +705,6 @@ body {
       position: relative;
       height: 20rem;
       width: 100%;
-      background-image: url("/dist/img/production-line.jpeg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -920,7 +914,6 @@ body {
   &__img {
     position: relative;
     width: 100%;
-    background-image: url("/dist/img/contact-img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
