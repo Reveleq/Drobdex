@@ -1,10 +1,13 @@
 
 # DROBDEX
 
-Strona www historycznego projektu edukacyjnego prowadzonego przez moich kolegów. Stworzona przy użyciu Angulara. Zawiera sekcje
-- O nas
-- Social Media
-- Materiały
+Website of a plant producing pallet elements. Written in HTML, SCSS, JS. Contains sections:
+- About us
+- Offer
+- History
+- Equipment
+- Gallery
+- Contact
 
 ## Live
 
